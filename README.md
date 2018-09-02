@@ -1,4 +1,4 @@
-# Positionierung und Verdekcung von AR-Elementen
+# Positionierung und Verdeckung von AR-Elementen
 
 Diese Implementierung auf Basis des CloudAnchor Beispielcodes von Google zeigt,
 wie virtuelle Objekte persistent positioniert und von der Umgebung verdeckt werden können.
