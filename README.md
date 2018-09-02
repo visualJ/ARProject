@@ -44,5 +44,5 @@ wie virtuelle Objekte persistent positioniert und von der Umgebung verdeckt werd
  
  ### Debugansicht
  In der Debugansicht werden Verdeckungsmodelle, Flächen, Punktwolken, Referenzpunkte, Ankerpunkt und Origin angezeigt.
- Zudem werden einige Debugbuttons und -anziegen im UI sichtbar.
+ Zudem werden einige Debugbuttons und -anzeigen im UI sichtbar.
  Der Debugmodus kann mit dem Debug Button umgeschaltet werden.
