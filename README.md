@@ -29,7 +29,7 @@ wie virtuelle Objekte persistent positioniert und von der Umgebung verdeckt werd
  Die Bilder und Punktwolke werden unter sdcard/Pictures/ARProject abgelegt unter aus dem Referenzpunktnamen abgeleiteten Dateien, wie
  point_0.png, point_0_l.png, point_0_r.png und point_0.obj.
  Der Name des nähesten Referenzpunktes wird im UI angezeigt.
- Der Zähler für die Punktnames wird bei jeden Neustart zurückgesetzt, sodass vorherige Punkte überschrieben werden.
+ Der Zähler für die Punktnames wird bei jedem Neustart zurückgesetzt, sodass vorherige Punkte überschrieben werden.
  Mit dem Clear DPs (clear depth points) Button kann der Zähler auch direkt zurückgesetzt werden. Die gespeicherten Referenzpunktpositionen werden dabei auch gelöscht. Gespeicherte Dateien bleiben jedoch erhalten.
  
  ### Verdeckungsmodelle hinterlegen
