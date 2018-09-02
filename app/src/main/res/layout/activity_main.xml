@@ -1,0 +1,210 @@
+<!--
+   Copyright 2018 Google Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   CHANGE NOTICE
+   This file has been modified by Benedikt Ringlein.
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.google.ar.core.examples.java.cloudanchor.CloudAnchorActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/host_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/host_button_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resolve_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resolve_button_text"
+        app:layout_constraintStart_toEndOf="@+id/host_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/room_code_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="#001337"
+        android:fontFamily="monospace"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="@string/initial_room_code"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barrier2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="host_button, resolve_button" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barrier2" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/minus_button"
+        app:layout_constraintTop_toTopOf="@+id/barrier2" />
+
+    <Button
+        android:id="@+id/x_minus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="X -"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minus_button" />
+
+    <Button
+        android:id="@+id/x_plus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="X +"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintStart_toEndOf="@+id/x_minus"
+        app:layout_constraintTop_toTopOf="@+id/x_minus" />
+
+    <Button
+        android:id="@+id/y_minus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Y -"
+        android:textColor="@android:color/holo_green_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/x_minus" />
+
+    <Button
+        android:id="@+id/y_plus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Y +"
+        android:textColor="@android:color/holo_green_light"
+        app:layout_constraintStart_toEndOf="@+id/y_minus"
+        app:layout_constraintTop_toTopOf="@+id/y_minus" />
+
+    <Button
+        android:id="@+id/z_minus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Z -"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/y_minus" />
+
+    <Button
+        android:id="@+id/z_plus"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Z +"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintStart_toEndOf="@+id/z_minus"
+        app:layout_constraintTop_toTopOf="@+id/z_minus" />
+
+    <Button
+        android:id="@+id/save_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barrier2" />
+
+    <TextView
+        android:id="@+id/depth_point_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#001337"
+        android:fontFamily="monospace"
+        android:padding="5dp"
+        android:text="point_placeholder"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_image_button"
+        tools:text="point_1" />
+
+    <Button
+        android:id="@+id/delete_dps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Clear DPs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/depth_point_label" />
+
+    <Button
+        android:id="@+id/toggle_debug_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Debug"
+        app:layout_constraintStart_toEndOf="@+id/resolve_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Group
+        android:id="@+id/debug_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="minus_button,plus_button,x_plus,delete_dps_button,z_minus,depth_point_label,save_image_button,y_plus,y_minus,x_minus,room_code_text,z_plus" />
+
+    <Button
+        android:id="@+id/save_point_cloud_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Save Point Cloud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_dps_button" />
+
+
+</android.support.constraint.ConstraintLayout>
