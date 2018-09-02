@@ -26,7 +26,7 @@ wie virtuelle Objekte persistent positioniert und von der Umgebung verdeckt werd
  Speichervorgang aus (Man kann prinzipiell auch erst auf den Button Tippen, und dann anfangen mit der Bewegung, allerdings verwackelt man den Vorgang dann eher). Dabei sollte das Gerät gleichmäßig weiterbewegt werden, bis am unteren Bildschrimrand der Erfolg verkündet wird.
  Wenn man den Button drückt, wird dabei das linke Bild aufgenommen. Nach 3,5cm Bewegung wird das mittlere Bild und die Punktwolke gespeichert.
  Und nach weiteren 3,5cm wird das rechte Bild gespeichert.
- Die Bilder und Punktwolke werden unter sdcard/Pictures/ARProject abgelegt unter aus dem Referenzpunktnamen abgeleiteten Datien, wie
+ Die Bilder und Punktwolke werden unter sdcard/Pictures/ARProject abgelegt unter aus dem Referenzpunktnamen abgeleiteten Dateien, wie
  point_0.png, point_0_l.png, point_0_r.png und point_0.obj.
  Der Name des nähesten Referenzpunktes wird im UI angezeigt.
  Der Zähler für die Punktnames wird bei jeden Neustart zurückgesetzt, sodass vorherige Punkte überschrieben werden.
